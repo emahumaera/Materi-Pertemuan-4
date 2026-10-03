@@ -169,7 +169,7 @@
       </div>
     </section>
 
-    <!-- s4: STUDI KASUS (tanpa video) -->
+    <!-- s4: STUDI KASUS -->
     <section class="section" id="s4">
       <div class="mb-10"><div class="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-4"><span class="text-lg">🎬</span> Problem Based Learning</div><h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Studi Kasus</h2><p class="text-slate-500 text-lg">Amati, renungkan, dan diskusikan skenario ini sebagai pemantik.</p></div>
       <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden mb-10 shadow-sm">
@@ -216,7 +216,7 @@
       </div>
     </section>
 
-    <!-- s6: DEFINISI HARDWARE (dipindah ke sebelum Alur I-P-O-P) -->
+    <!-- s6: DEFINISI HARDWARE -->
     <section class="section" id="s6">
       <div class="mb-10"><h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Pengertian Hardware</h2><p class="text-slate-500 text-lg">Definisi dan karakteristik fisik komputer.</p></div>
       <div class="bg-brand-blue rounded-3xl p-8 sm:p-10 text-white shadow-lg mb-10"><p class="text-2xl leading-relaxed font-light"><strong>Perangkat keras (hardware)</strong> adalah komponen elektronik pada komputer yang berwujud fisik, dapat dilihat kasat mata, dan dapat disentuh.</p></div>
@@ -247,19 +247,20 @@
       </div>
     </section>
 
-    <!-- s7: ALUR I-P-O-P (dengan ruang video) -->
+    <!-- s7: ALUR I-P-O-P (dengan video Google Drive) -->
     <section class="section" id="s7">
       <div class="mb-10"><h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Alur I - P - O - P</h2><p class="text-slate-500 text-lg">Bagaimana perjalanan data di dalam sistem komputer.</p></div>
 
-      <!-- RUANG VIDEO -->
+      <!-- RUANG VIDEO (Google Drive) -->
       <div class="bg-white p-3 rounded-[2rem] shadow-soft border border-slate-100 mb-10">
         <div class="relative w-full overflow-hidden rounded-[1.5rem] bg-slate-900 aspect-video">
-          <!-- =========================================================
-               GANTI URL VIDEO DI BAWAH INI
-               Ganti "VIDEO_ID_ANDA" dengan ID video YouTube pilihan Anda.
-               Contoh: https://www.youtube.com/embed/2zCzGoMRQNQ?rel=0
-               ========================================================= -->
-          <iframe class="absolute top-0 left-0 w-full h-full border-0" src="videopembelajaran.mp4" title="Video Alur I-P-O-P Sistem Komputer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            class="absolute top-0 left-0 w-full h-full border-0"
+            src="https://drive.google.com/file/d/1NNlyvEYzaM0BnTVv9tIjnXA-lBuHiAD_/preview"
+            title="Video Alur I-P-O-P Sistem Komputer"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
 
@@ -414,7 +415,6 @@ const deviceImages = {
 
 /* ============ DATA LENGKAP PERANGKAT ============ */
 const deviceData = {
-  // INPUT
   keyboard: { title: 'Keyboard', kategori: 'Input', katClass: 'lb-kat-input', emoji: '⌨️', desc: 'Keyboard adalah perangkat input yang digunakan untuk mengetik huruf, angka, simbol, dan perintah ke dalam komputer. Keyboard modern memiliki layout QWERTY dengan tombol fungsi, navigasi, dan numerik.', tips: '💡 <strong>Fakta:</strong> Keyboard pertama kali dipatenkan oleh Christopher Latham Sholes pada 1868. Layout QWERTY dirancang untuk mengurangi kemacetan pada mesin tik mekanik.' },
   mouse: { title: 'Mouse', kategori: 'Input', katClass: 'lb-kat-input', emoji: '🖱️', desc: 'Mouse adalah perangkat penunjuk (pointing device) untuk menggerakkan kursor, mengklik, men-drag, dan berinteraksi dengan antarmuka grafis. Mouse modern dilengkapi scroll wheel dan sensor optik/laser.', tips: '💡 <strong>Fakta:</strong> Mouse pertama diciptakan Douglas Engelbart tahun 1964 dan terbuat dari kayu!' },
   scanner: { title: 'Scanner', kategori: 'Input', katClass: 'lb-kat-input', emoji: '📠', desc: 'Scanner adalah perangkat input yang memindai dokumen fisik menjadi file digital berbentuk gambar atau PDF. Hasil scan dapat diedit dan disimpan di komputer.', tips: '💡 <strong>Jenis:</strong> Flatbed, sheet-fed, dan handheld scanner.' },
@@ -425,20 +425,17 @@ const deviceData = {
   barcode: { title: 'Scanner 2', kategori: 'Input', katClass: 'lb-kat-input', emoji: '📊', desc: 'Barcode scanner membaca kode batang (barcode) pada produk. Umum digunakan di supermarket, perpustakaan, dan manajemen inventaris.', tips: '💡 <strong>Fakta:</strong> Barcode pertama dipatenkan 1952, tapi baru dipakai komersial 1974 di supermarket Ohio, AS.' },
   case: { title: 'Case', kategori: 'Proses', katClass: 'lb-kat-proses', emoji: '📦', desc: 'Case adalah wadah pelindung utama untuk menempatkan, mengorganisasi, dan mengamankan berbagai komponen internal komputer seperti motherboard, PSU, dan drive penyimpanan.', tips: '💡 <strong>Jenis:</strong> Full tower (besar), Mid tower (sedang), Mini-ITX (kecil).' },
 
-  // PROSES
   cpu: { title: 'CPU (Central Processing Unit)', kategori: 'Proses', katClass: 'lb-kat-proses', emoji: '🧠', desc: 'CPU adalah unit pemroses utama yang menjadi "otak" komputer. Menerima instruksi dari input, mengolahnya, dan mengirim hasil ke output. Terdiri dari ALU dan CU.', tips: '💡 <strong>Fakta:</strong> CPU modern seperti Intel Core i9 memiliki miliaran transistor dalam satu chip berukuran beberapa sentimeter!' },
   gpu: { title: 'GPU (Graphics Processing Unit)', kategori: 'Proses', katClass: 'lb-kat-proses', emoji: '🎮', desc: 'GPU adalah prosesor khusus yang mengolah data grafis dan gambar. Sangat penting untuk gaming, editing video, rendering 3D, dan machine learning.', tips: '💡 <strong>Perbedaan:</strong> CPU sedikit core tapi cepat untuk tugas kompleks. GPU banyak core untuk tugas paralel seperti rendering.' },
-  ram: { title: 'RAM (Random Access Memory)', kategori: 'Proses', katClass: 'lb-kat-proses', emoji: '💾', desc: 'RAM adalah memori penyimpanan sementara yang menyimpan data dan instruksi saat komputer bekerja. Semakin besar RAM, semakin banyak aplikasi bisa dibuka bersamaan.', tips: '💡 <strong>Analogi:</strong> RAM seperti meja belajar — hanya menampung buku yang sedang dipakai. Saat komputer dimatikan, isi RAM ikut hilang.' },
+  ram: { title: 'RAM (Random Access Memory)', kategori: 'Penyimpanan', katClass: 'lb-kat-storage', emoji: '💾', desc: 'RAM adalah memori penyimpanan sementara yang menyimpan data dan instruksi saat komputer bekerja. Semakin besar RAM, semakin banyak aplikasi bisa dibuka bersamaan.', tips: '💡 <strong>Analogi:</strong> RAM seperti meja belajar — hanya menampung buku yang sedang dipakai. Saat komputer dimatikan, isi RAM ikut hilang.' },
   motherboard: { title: 'Motherboard', kategori: 'Proses', katClass: 'lb-kat-proses', emoji: '🔌', desc: 'Motherboard adalah papan sirkuit utama yang menghubungkan semua komponen — CPU, RAM, GPU, storage, dan periferal. Menyalurkan daya dan data antar komponen.', tips: '💡 <strong>Fakta:</strong> Motherboard juga sering disebut "mobo" atau "mainboard" oleh teknisi komputer.' },
 
-  // OUTPUT
   monitor: { title: 'Monitor', kategori: 'Output', katClass: 'lb-kat-output', emoji: '🖥️', desc: 'Monitor adalah perangkat output utama yang menampilkan gambar, teks, dan video secara visual. Menjadi jendela interaksi antara pengguna dengan komputer.', tips: '💡 <strong>Jenis panel:</strong> TN (cepat), IPS (warna akurat), VA (kontras tinggi), OLED (hitam sempurna).' },
   printer: { title: 'Printer', kategori: 'Output', katClass: 'lb-kat-output', emoji: '🖨️', desc: 'Printer adalah perangkat output yang mencetak dokumen atau gambar ke media fisik seperti kertas. Ada beberapa jenis: inkjet (tinta cair), laser (toner), dan dot matrix.', tips: '💡 <strong>Tips:</strong> Printer inkjet lebih murah tapi boros tinta. Printer laser lebih mahal tapi hemat biaya per halaman.' },
   speaker: { title: 'Speaker', kategori: 'Output', katClass: 'lb-kat-output', emoji: '🔊', desc: 'Speaker adalah perangkat output yang mengeluarkan suara dari komputer. Mengubah sinyal listrik menjadi gelombang suara yang bisa didengar.', tips: '💡 <strong>Fakta:</strong> Speaker mengubah sinyal listrik menjadi getaran mekanis melalui membran yang bergerak cepat.' },
   proyektor: { title: 'Proyektor', kategori: 'Output', katClass: 'lb-kat-output', emoji: '📽️', desc: 'Proyektor menampilkan gambar ke layar besar atau dinding. Umum digunakan untuk presentasi, bioskop, dan pembelajaran di kelas.', tips: '💡 <strong>Jenis:</strong> LCD, DLP, dan Laser.' },
   headset: { title: 'Headset', kategori: 'Output', katClass: 'lb-kat-output', emoji: '🎧', desc: 'Headset adalah perangkat output audio yang dikenakan di kepala. Terdiri dari headphone (speaker di telinga) dan sering dilengkapi mikrofon untuk komunikasi.', tips: '💡 <strong>Fakta:</strong> Headset dengan noise-cancelling dapat memblokir suara luar hingga 30 dB.' },
 
-  // STORAGE
   hdd: { title: 'HDD (Hard Disk Drive)', kategori: 'Penyimpanan', katClass: 'lb-kat-storage', emoji: '💿', desc: 'HDD adalah media penyimpanan magnetik dengan piringan berputar. Menyimpan data permanen dengan kapasitas besar dan harga murah, namun lebih lambat dibanding SSD.', tips: '💡 <strong>Analogi:</strong> HDD seperti lemari besar di rumah — muat banyak barang, tapi untuk mengambil barang perlu waktu.' },
   ssd: { title: 'SSD (Solid State Drive)', kategori: 'Penyimpanan', katClass: 'lb-kat-storage', emoji: '⚡', desc: 'SSD adalah media penyimpanan berbasis chip memori flash tanpa bagian bergerak. Jauh lebih cepat, senyap, dan tahan guncangan dibanding HDD, tapi lebih mahal.', tips: '💡 <strong>Fakta:</strong> SSD bisa membaca data hingga 7.000 MB/detik — 10x lebih cepat dari HDD tercepat!' },
   flashdisk: { title: 'Flashdisk', kategori: 'Penyimpanan', katClass: 'lb-kat-storage', emoji: '🔌', desc: 'Flashdisk adalah media penyimpanan portabel berbasis flash memory dengan konektor USB. Kecil, ringan, mudah dibawa, dan tidak memerlukan daya eksternal.', tips: '💡 <strong>Analogi:</strong> Flashdisk seperti tas kecil — membawa barang ke tempat lain dengan mudah.' },
@@ -462,7 +459,6 @@ const deviceGroups = {
   'grid-proses': [
     { id: 'cpu', name: 'CPU', desc: 'Otak komputer; mengolah semua data', badge: 'lb-kat-proses', badgeText: 'Proses' },
     { id: 'gpu', name: 'GPU (VGA)', desc: 'Mengolah data grafis dan gambar', badge: 'lb-kat-proses', badgeText: 'Proses' },
-    { id: 'ram', name: 'RAM', desc: 'Menyimpan data sementara', badge: 'lb-kat-proses', badgeText: 'Proses' },
     { id: 'motherboard', name: 'Motherboard', desc: 'Papan utama penghubung komponen', badge: 'lb-kat-proses', badgeText: 'Proses' }
   ],
   'grid-output': [
@@ -473,6 +469,7 @@ const deviceGroups = {
     { id: 'headset', name: 'Headset', desc: 'Suara langsung ke telinga', badge: 'lb-kat-output', badgeText: 'Output' }
   ],
   'grid-storage-internal': [
+    { id: 'ram', name: 'RAM', desc: 'Menyimpan data sementara saat bekerja', badge: 'lb-kat-storage', badgeText: 'Storage' },
     { id: 'hdd', name: 'HDD', desc: 'Kapasitas besar, murah, lebih lambat', badge: 'lb-kat-storage', badgeText: 'Storage' },
     { id: 'ssd', name: 'SSD', desc: 'Lebih cepat, ringan, lebih mahal', badge: 'lb-kat-storage', badgeText: 'Storage' }
   ],
